@@ -6,9 +6,13 @@ for i in range(int(input())):
     #print(email)
     a = bool(re.match(regex_pattern, email, re.I))
     if a == True:
-        #print("YES")
+        print("AWESOME GOOD MAIL ID")
         print(email)
+        with open("validmails.txt", "+a") as f:
+            f.write(email)
+            f.write("\n")
     else:
+        print("THATS A BAD MAIL ID MAN NAH")
         pass
     #print(name)
     #print(email)
